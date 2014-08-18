@@ -4,9 +4,8 @@
 
 [![browser support](https://ci.testling.com/feross/parse-torrent-file.png)](https://ci.testling.com/feross/parse-torrent-file)
 
-Also works in the browser with [browserify](http://browserify.org/)! Works well with the buffers returned from [bencode](https://www.npmjs.org/package/bencode).
-
-This module is used by [WebTorrent](http://webtorrent.io).
+Works in node and the browser (with [browserify](http://browserify.org/)). This module is
+used by [WebTorrent](http://webtorrent.io)!
 
 ## install
 
