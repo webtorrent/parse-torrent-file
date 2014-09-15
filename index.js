@@ -2,8 +2,8 @@ module.exports = parseTorrent
 module.exports.toBuffer = toBuffer
 
 var bencode = require('bencode')
-var crypto = require('crypto')
 var path = require('path')
+var sha1 = require('git-sha1')
 
 /**
  * Parse a torrent. Throws an exception if the torrent is missing required fields.
@@ -134,10 +134,6 @@ function splitPieces (buf) {
     pieces.push(buf.slice(i, i + 20).toString('hex'))
   }
   return pieces
-}
-
-function sha1 (buf) {
-  return crypto.createHash('sha1').update(buf).digest('hex')
 }
 
 function ensure (bool, fieldName) {
