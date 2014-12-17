@@ -10,7 +10,8 @@ function usage () {
 var torrentPath = process.argv[2]
 
 if (!torrentPath) {
-  return usage()
+  usage()
+  process.exit(-1)
 }
 
 try {
@@ -18,6 +19,7 @@ try {
 } catch (err) {
   console.error(err.message + '\n')
   usage()
+  process.exit(-1)
 }
 
 delete parsedTorrent.info
