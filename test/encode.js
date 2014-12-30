@@ -4,9 +4,9 @@ var test = require('tape')
 
 var leaves = fs.readFileSync(__dirname + '/torrents/leaves.torrent')
 
-test('toBuffer', function (t) {
+test('encode', function (t) {
   var parsedTorrent = parseTorrent(leaves)
-  var buf = parseTorrent.toBuffer(parsedTorrent)
+  var buf = parseTorrent.encode(parsedTorrent)
   var doubleParsedTorrent = parseTorrent(buf)
 
   t.deepEqual(parsedTorrent.infoBuffer, doubleParsedTorrent.infoBuffer)

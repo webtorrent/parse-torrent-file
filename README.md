@@ -104,7 +104,7 @@ The `parsed` torrent object looks like this:
 }
 ```
 
-To convert a parsed torrent back into a .torrent file buffer, call `parseTorrentFile.toBuffer`.
+To convert a parsed torrent back into a .torrent file buffer, call `parseTorrentFile.encode`.
 
 ```js
 var parseTorrentFile = require('parse-torrent-file')
@@ -113,7 +113,7 @@ var parseTorrentFile = require('parse-torrent-file')
 var parsed = parseTorrentFile(/* some buffer */)
 
 // convert parsed torrent back to a buffer
-var buf = parseTorrentFile.toBuffer(parsed)
+var buf = parseTorrentFile.encode(parsed)
 ```
 
 ## credit

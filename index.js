@@ -1,5 +1,6 @@
-module.exports = parseTorrent
-module.exports.toBuffer = toBuffer
+module.exports = decodeTorrentFile
+module.exports.decode = decodeTorrentFile
+module.exports.encode = encodeTorrentFile
 
 var bencode = require('bencode')
 var path = require('path')
@@ -10,7 +11,7 @@ var sha1 = require('git-sha1')
  * @param  {Buffer|Object} torrent
  * @return {Object}        parsed torrent
  */
-function parseTorrent (torrent) {
+function decodeTorrentFile (torrent) {
   if (Buffer.isBuffer(torrent)) {
     torrent = bencode.decode(torrent)
   }
@@ -96,7 +97,7 @@ function parseTorrent (torrent) {
  * @param  {Object} parsed parsed torrent
  * @return {Buffer}
  */
-function toBuffer (parsed) {
+function encodeTorrentFile (parsed) {
   var torrent = {
     info: parsed.info
   }
