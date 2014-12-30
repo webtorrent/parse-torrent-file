@@ -340,34 +340,22 @@ var prideParsed = {
 }
 
 test('parse single file torrent', function (t) {
-  t.doesNotThrow(function () {
-    parseTorrent(leaves)
-  })
   t.deepEquals(parseTorrent(leaves), leavesParsed)
   t.end()
 })
 
 test('parse "torrent" from magnet metadata protocol', function (t) {
-  t.doesNotThrow(function () {
-    parseTorrent(leavesMagnet)
-  })
   t.deepEquals(parseTorrent(leavesMagnet), leavesMagnetParsed)
   t.end()
 })
 
 test('parse multiple file torrent', function (t) {
-  t.doesNotThrow(function () {
-    parseTorrent(pride)
-  })
   t.deepEquals(parseTorrent(pride), prideParsed)
   t.end()
 })
 
 test('parse torrent from object', function (t) {
   var torrent = bencode.decode(pride)
-  t.doesNotThrow(function () {
-    parseTorrent(torrent)
-  })
   t.deepEquals(parseTorrent(torrent), prideParsed)
   t.end()
 })
