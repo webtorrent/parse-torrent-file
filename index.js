@@ -4,7 +4,7 @@ module.exports.encode = encodeTorrentFile
 
 var bencode = require('bencode')
 var path = require('path')
-var sha1 = require('git-sha1')
+var sha1 = require('simple-sha1')
 
 /**
  * Parse a torrent. Throws an exception if the torrent is missing required fields.
@@ -34,7 +34,7 @@ function decodeTorrentFile (torrent) {
   var result = {}
   result.info = torrent.info
   result.infoBuffer = bencode.encode(torrent.info)
-  result.infoHash = sha1(result.infoBuffer)
+  result.infoHash = sha1.sync(result.infoBuffer)
 
   result.name = torrent.info.name.toString()
   result.private = !!torrent.info.private
