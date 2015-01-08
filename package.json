@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "brfs": "^1.0.0",
-    "tape": "^2.5.0"
+    "tape": "^3.0.3",
   },
   "homepage": "https://github.com/feross/parse-torrent-file",
   "keywords": [
