@@ -1,8 +1,11 @@
-# parse-torrent-file [![travis](https://img.shields.io/travis/feross/parse-torrent-file.svg)](https://travis-ci.org/feross/parse-torrent-file) [![npm](https://img.shields.io/npm/v/parse-torrent-file.svg)](https://npmjs.org/package/parse-torrent-file) [![downloads](https://img.shields.io/npm/dm/parse-torrent-file.svg)](https://npmjs.org/package/parse-torrent-file)
+# parse-torrent-file
+[![travis](https://img.shields.io/travis/feross/parse-torrent-file.svg?style=flat)](https://travis-ci.org/feross/parse-torrent-file)
+[![npm](https://img.shields.io/npm/v/parse-torrent-file.svg?style=flat)](https://npmjs.org/package/parse-torrent-file)
+[![downloads](https://img.shields.io/npm/dm/parse-torrent-file.svg?style=flat)](https://npmjs.org/package/parse-torrent-file)
 
 #### Parse a .torrent file and return an object of keys/values
 
-[![browser support](https://ci.testling.com/feross/parse-torrent-file.png)](https://ci.testling.com/feross/parse-torrent-file)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/parse-torrent-file.svg)](https://saucelabs.com/u/parse-torrent-file)
 
 Works in node and the browser (with [browserify](http://browserify.org/)). This module is
 used by [WebTorrent](http://webtorrent.io)!
