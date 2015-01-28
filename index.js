@@ -64,6 +64,12 @@ function decodeTorrentFile (torrent) {
   result.announce = [].concat.apply([], result.announceList)
 
   // handle url-list (BEP19 / web seeding)
+  if (Buffer.isBuffer(torrent['url-list'])) {
+    // some clients set url-list to empty string
+    torrent['url-list'] = torrent['url-list'].length > 0
+      ? [ torrent['url-list'] ]
+      : []
+  }
   result.urlList = (torrent['url-list'] || []).map(function (url) {
     return url.toString()
   })
