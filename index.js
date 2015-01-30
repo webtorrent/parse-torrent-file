@@ -130,7 +130,6 @@ function encodeTorrentFile (parsed) {
   return bencode.encode(torrent)
 }
 
-
 function sumLength (sum, file) {
   return sum + file.length
 }

@@ -6,6 +6,6 @@ var leavesUrlList = fs.readFileSync(__dirname + '/torrents/leaves-url-list.torre
 
 test('parse url-list for webseed support', function (t) {
   var torrent = parseTorrent(leavesUrlList)
-  t.deepEqual(torrent.urlList, [ "http://www2.hn.psu.edu/faculty/jmanis/whitman/leaves-of-grass6x9.pdf" ])
+  t.deepEqual(torrent.urlList, [ 'http://www2.hn.psu.edu/faculty/jmanis/whitman/leaves-of-grass6x9.pdf' ])
   t.end()
 })
