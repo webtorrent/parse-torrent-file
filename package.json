@@ -1,7 +1,7 @@
 {
   "name": "parse-torrent-file",
   "description": "Parse a .torrent file and return an object of keys/values",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
   "bin": "./bin/cmd.js",
   "bugs": {
