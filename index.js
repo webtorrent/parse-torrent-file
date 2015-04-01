@@ -28,7 +28,7 @@ function decodeTorrentFile (torrent) {
       ensure(file.path, 'info.files[0].path')
     })
   } else {
-    ensure(torrent.info.length, 'info.length')
+    ensure(typeof torrent.info.length === 'number', 'info.length')
   }
 
   var result = {}
