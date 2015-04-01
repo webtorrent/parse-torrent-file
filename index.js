@@ -39,11 +39,9 @@ function decodeTorrentFile (torrent) {
   result.name = torrent.info.name.toString()
   result.private = !!torrent.info.private
 
-  if (torrent['creation date'])
-    result.created = new Date(torrent['creation date'] * 1000)
+  if (torrent['creation date']) result.created = new Date(torrent['creation date'] * 1000)
 
-  if (Buffer.isBuffer(torrent.comment))
-    result.comment = torrent.comment.toString()
+  if (Buffer.isBuffer(torrent.comment)) result.comment = torrent.comment.toString()
 
   // announce/announce-list may be missing if metadata fetched via ut_metadata extension
   var announce = torrent['announce-list']
