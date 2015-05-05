@@ -14,7 +14,7 @@
   "devDependencies": {
     "brfs": "^1.0.0",
     "standard": "^3.3.0",
-    "tape": "^3.0.3",
+    "tape": "^4.0.0",
     "zuul": "^2.0.0"
   },
   "homepage": "https://github.com/feross/parse-torrent-file",
