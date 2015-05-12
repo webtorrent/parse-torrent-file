@@ -43,23 +43,17 @@ function decodeTorrentFile (torrent) {
 
   if (Buffer.isBuffer(torrent.comment)) result.comment = torrent.comment.toString()
 
-  // announce/announce-list may be missing if metadata fetched via ut_metadata extension
-  var announce = torrent['announce-list']
-  if (!announce) {
-    if (torrent.announce) {
-      announce = [[torrent.announce]]
-    } else {
-      announce = []
-    }
-  }
-
-  result.announceList = announce.map(function (urls) {
-    return urls.map(function (url) {
-      return url.toString()
+  // announce and announce-list will be missing if metadata fetched via ut_metadata
+  result.announce = []
+  if (torrent['announce-list']) {
+    torrent['announce-list'].forEach(function (urls) {
+      urls.forEach(function (url) {
+        result.announce.push(url.toString())
+      })
     })
-  })
-
-  result.announce = [].concat.apply([], result.announceList)
+  } else if (torrent.announce) {
+    result.announce.push(torrent.announce)
+  }
 
   // handle url-list (BEP19 / web seeding)
   if (Buffer.isBuffer(torrent['url-list'])) {
@@ -106,21 +100,11 @@ function encodeTorrentFile (parsed) {
     info: parsed.info
   }
 
-  if (parsed.announce && parsed.announce[0]) {
-    torrent.announce = parsed.announce[0]
-  }
-
-  if (parsed.announceList) {
-    torrent['announce-list'] = parsed.announceList.map(function (urls) {
-      return urls.map(function (url) {
-        url = new Buffer(url, 'utf8')
-        if (!torrent.announce) {
-          torrent.announce = url
-        }
-        return url
-      })
-    })
-  }
+  torrent['announce-list'] = parsed.announce.map(function (url) {
+    if (!torrent.announce) torrent.announce = url
+    url = new Buffer(url, 'utf8')
+    return [ url ]
+  })
 
   if (parsed.created) {
     torrent['creation date'] = (parsed.created.getTime() / 1000) | 0
