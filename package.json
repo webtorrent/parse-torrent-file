@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "bencode": "^0.7.0",
-    "simple-sha1": "^2.0.0"
+    "simple-sha1": "^2.0.0",
+    "uniq": "^1.0.1"
   },
   "devDependencies": {
     "brfs": "^1.0.0",

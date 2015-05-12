@@ -5,6 +5,7 @@ module.exports.encode = encodeTorrentFile
 var bencode = require('bencode')
 var path = require('path')
 var sha1 = require('simple-sha1')
+var uniq = require('uniq')
 
 /**
  * Parse a torrent. Throws an exception if the torrent is missing required fields.
@@ -54,6 +55,8 @@ function decodeTorrentFile (torrent) {
   } else if (torrent.announce) {
     result.announce.push(torrent.announce)
   }
+
+  uniq(result.announce)
 
   // handle url-list (BEP19 / web seeding)
   if (Buffer.isBuffer(torrent['url-list'])) {
