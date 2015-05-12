@@ -41,24 +41,6 @@ The `parsed` torrent object looks like this:
   "name": "Leaves of Grass by Walt Whitman.epub",
   "private": false,
   "created": "2013-08-01T13:27:46.000Z",
-  "announceList": [
-    [
-      "http://tracker.thepiratebay.org/announce"
-    ],
-    [
-      "udp://tracker.openbittorrent.com:80"
-    ],
-    [
-      "udp://tracker.ccc.de:80"
-    ],
-    [
-      "udp://tracker.publicbt.com:80"
-    ],
-    [
-      "udp://fr33domtracker.h33t.com:3310/announce",
-      "http://tracker.bittorrent.am/announce"
-    ]
-  ],
   "announce": [
     "http://tracker.thepiratebay.org/announce",
     "udp://tracker.openbittorrent.com:80",
