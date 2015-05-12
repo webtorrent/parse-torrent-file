@@ -1,18 +1,17 @@
 var fs = require('fs')
-var parseTorrent = require('../')
+var parseTorrentFile = require('../')
 var test = require('tape')
 
 var leaves = fs.readFileSync(__dirname + '/torrents/leaves.torrent')
 
 test('encode', function (t) {
-  var parsedTorrent = parseTorrent(leaves)
-  var buf = parseTorrent.encode(parsedTorrent)
-  var doubleParsedTorrent = parseTorrent(buf)
+  var parsedTorrent = parseTorrentFile(leaves)
+  var buf = parseTorrentFile.encode(parsedTorrent)
+  var doubleParsedTorrent = parseTorrentFile(buf)
 
-  t.deepEqual(parsedTorrent.infoBuffer, doubleParsedTorrent.infoBuffer)
-  t.equal(parsedTorrent.created.getDate(), doubleParsedTorrent.created.getDate())
-  t.deepEqual(parsedTorrent.announce, doubleParsedTorrent.announce)
-  t.deepEqual(parsedTorrent.announceList, doubleParsedTorrent.announceList)
+  t.deepEqual(doubleParsedTorrent.infoBuffer, parsedTorrent.infoBuffer)
+  t.equal(doubleParsedTorrent.created.getDate(), parsedTorrent.created.getDate())
+  t.deepEqual(doubleParsedTorrent.announce, parsedTorrent.announce)
 
   t.end()
 })

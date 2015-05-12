@@ -1,6 +1,6 @@
 var bencode = require('bencode')
 var fs = require('fs')
-var parseTorrent = require('../')
+var parseTorrentFile = require('../')
 var test = require('tape')
 
 var leaves = fs.readFileSync(__dirname + '/torrents/leaves.torrent')
@@ -298,22 +298,22 @@ var prideParsed = {
 }
 
 test('parse single file torrent', function (t) {
-  t.deepEquals(parseTorrent(leaves), leavesParsed)
+  t.deepEquals(parseTorrentFile(leaves), leavesParsed)
   t.end()
 })
 
 test('parse "torrent" from magnet metadata protocol', function (t) {
-  t.deepEquals(parseTorrent(leavesMagnet), leavesMagnetParsed)
+  t.deepEquals(parseTorrentFile(leavesMagnet), leavesMagnetParsed)
   t.end()
 })
 
 test('parse multiple file torrent', function (t) {
-  t.deepEquals(parseTorrent(pride), prideParsed)
+  t.deepEquals(parseTorrentFile(pride), prideParsed)
   t.end()
 })
 
 test('parse torrent from object', function (t) {
   var torrent = bencode.decode(pride)
-  t.deepEquals(parseTorrent(torrent), prideParsed)
+  t.deepEquals(parseTorrentFile(torrent), prideParsed)
   t.end()
 })
