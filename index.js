@@ -112,6 +112,9 @@ function encodeTorrentFile (parsed) {
   if (parsed.created) {
     torrent['creation date'] = (parsed.created.getTime() / 1000) | 0
   }
+  if (parsed.urlList) {
+    torrent['url-list'] = parsed.urlList
+  }
   return bencode.encode(torrent)
 }
 
