@@ -19,14 +19,14 @@ function decodeTorrentFile (torrent) {
 
   // sanity check
   ensure(torrent.info, 'info')
-  ensure(torrent.info.name, 'info.name')
+  ensure(torrent.info['name.utf-8'] || torrent.info.name, 'info.name')
   ensure(torrent.info['piece length'], 'info[\'piece length\']')
   ensure(torrent.info.pieces, 'info.pieces')
 
   if (torrent.info.files) {
     torrent.info.files.forEach(function (file) {
       ensure(typeof file.length === 'number', 'info.files[0].length')
-      ensure(file.path, 'info.files[0].path')
+      ensure(file['path.utf-8'] || file.path, 'info.files[0].path')
     })
   } else {
     ensure(typeof torrent.info.length === 'number', 'info.length')
@@ -37,7 +37,7 @@ function decodeTorrentFile (torrent) {
   result.infoBuffer = bencode.encode(torrent.info)
   result.infoHash = sha1.sync(result.infoBuffer)
 
-  result.name = torrent.info.name.toString()
+  result.name = (torrent.info['name.utf-8'] || torrent.info.name).toString()
   result.private = !!torrent.info.private
 
   if (torrent['creation date']) result.created = new Date(torrent['creation date'] * 1000)
@@ -69,9 +69,9 @@ function decodeTorrentFile (torrent) {
     return url.toString()
   })
 
-  var files = torrent.info.files || [torrent.info]
+  var files = torrent.info.files || [ torrent.info ]
   result.files = files.map(function (file, i) {
-    var parts = [].concat(file.name || result.name, file.path || []).map(function (p) {
+    var parts = [].concat(result.name, file['path.utf-8'] || file.path || []).map(function (p) {
       return p.toString()
     })
     return {
