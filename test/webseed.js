@@ -10,7 +10,7 @@ test('parse url-list for webseed support', function (t) {
   t.end()
 })
 
-test('save url-list for webseed support', function (t) {
+test('encode url-list for webseed support', function (t) {
   var parsedTorrent = parseTorrentFile(leavesUrlList)
   var buf = parseTorrentFile.encode(parsedTorrent)
   var doubleParsedTorrent = parseTorrentFile(buf)
