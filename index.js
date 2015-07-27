@@ -53,7 +53,7 @@ function decodeTorrentFile (torrent) {
       })
     })
   } else if (torrent.announce) {
-    result.announce.push(torrent.announce)
+    result.announce.push(torrent.announce.toString())
   }
 
   uniq(result.announce)
