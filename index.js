@@ -38,7 +38,8 @@ function decodeTorrentFile (torrent) {
   result.infoHash = sha1.sync(result.infoBuffer)
 
   result.name = (torrent.info['name.utf-8'] || torrent.info.name).toString()
-  result.private = !!torrent.info.private
+
+  if (torrent.info.private !== undefined) result.private = !!torrent.info.private
 
   if (torrent['creation date']) result.created = new Date(torrent['creation date'] * 1000)
 
