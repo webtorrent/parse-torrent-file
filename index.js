@@ -42,6 +42,7 @@ function decodeTorrentFile (torrent) {
   if (torrent.info.private !== undefined) result.private = !!torrent.info.private
 
   if (torrent['creation date']) result.created = new Date(torrent['creation date'] * 1000)
+  if (torrent['created by']) result.createdBy = torrent['created by'].toString()
 
   if (Buffer.isBuffer(torrent.comment)) result.comment = torrent.comment.toString()
 
