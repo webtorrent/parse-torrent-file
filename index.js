@@ -48,7 +48,7 @@ function decodeTorrentFile (torrent) {
 
   // announce and announce-list will be missing if metadata fetched via ut_metadata
   result.announce = []
-  if (torrent['announce-list']) {
+  if (torrent['announce-list'] && torrent['announce-list'].length) {
     torrent['announce-list'].forEach(function (urls) {
       urls.forEach(function (url) {
         result.announce.push(url.toString())
