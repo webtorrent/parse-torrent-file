@@ -9,6 +9,7 @@ var pride = fs.readFileSync(__dirname + '/torrents/pride.torrent')
 
 var leavesParsed = {
   infoHash: 'd2474e86c95b19b8bcfdb92bc12c9d44667cfa36',
+  infoHashBuffer: new Buffer('d2474e86c95b19b8bcfdb92bc12c9d44667cfa36', 'hex'),
   name: 'Leaves of Grass by Walt Whitman.epub',
   created: new Date('Thu Aug 01 2013 06:27:46 GMT-0700 (PDT)'),
   createdBy: 'uTorrent/3300',
@@ -69,6 +70,7 @@ var leavesParsed = {
 
 var leavesMagnetParsed = {
   infoHash: 'd2474e86c95b19b8bcfdb92bc12c9d44667cfa36',
+  infoHashBuffer: new Buffer('d2474e86c95b19b8bcfdb92bc12c9d44667cfa36', 'hex'),
   name: 'Leaves of Grass by Walt Whitman.epub',
   announce: [],
   urlList: [],
@@ -119,6 +121,7 @@ var leavesMagnetParsed = {
 
 var prideParsed = {
   infoHash: '455a2295b558ac64e0348fb0c61f433224484908',
+  infoHashBuffer: new Buffer('455a2295b558ac64e0348fb0c61f433224484908', 'hex'),
   name: 'PRIDE AND PREJUDICE  - Jane Austen',
   created: new Date('Mon Jul 22 2013 10:33:19 GMT-0700 (PDT)'),
   createdBy: 'uTorrent/3300',

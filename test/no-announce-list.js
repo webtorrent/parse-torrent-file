@@ -6,6 +6,7 @@ var bitloveIntro = fs.readFileSync(__dirname + '/torrents/bitlove-intro.torrent'
 
 var bitloveParsed = {
   infoHash: '4cb67059ed6bd08362da625b3ae77f6f4a075705',
+  infoHashBuffer: new Buffer('4cb67059ed6bd08362da625b3ae77f6f4a075705', 'hex'),
   name: 'bl001-introduction.webm',
   announce: [
     'http://t.bitlove.org/announce'
