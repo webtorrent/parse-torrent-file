@@ -1,5 +1,5 @@
 # parse-torrent-file
-[![travis](https://img.shields.io/travis/feross/parse-torrent-file.svg?style=flat)](https://travis-ci.org/feross/parse-torrent-file)
+[![travis](https://img.shields.io/travis/feross/parse-torrent-file/master.svg?style=flat)](https://travis-ci.org/feross/parse-torrent-file)
 [![npm](https://img.shields.io/npm/v/parse-torrent-file.svg?style=flat)](https://npmjs.org/package/parse-torrent-file)
 [![downloads](https://img.shields.io/npm/dm/parse-torrent-file.svg?style=flat)](https://npmjs.org/package/parse-torrent-file)
 
