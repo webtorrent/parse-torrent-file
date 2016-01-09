@@ -59,8 +59,6 @@ function decodeTorrentFile (torrent) {
     result.announce.push(torrent.announce.toString())
   }
 
-  uniq(result.announce)
-
   // handle url-list (BEP19 / web seeding)
   if (Buffer.isBuffer(torrent['url-list'])) {
     // some clients set url-list to empty string
@@ -71,6 +69,9 @@ function decodeTorrentFile (torrent) {
   result.urlList = (torrent['url-list'] || []).map(function (url) {
     return url.toString()
   })
+
+  uniq(result.announce)
+  uniq(result.urlList)
 
   var files = torrent.info.files || [ torrent.info ]
   result.files = files.map(function (file, i) {
