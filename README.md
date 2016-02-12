@@ -20,8 +20,9 @@ npm install parse-torrent-file
 
 ```js
 var parseTorrentFile = require('parse-torrent-file')
+var path = require('path')
 
-var torrent = fs.readFileSync(__dirname + '/torrents/leaves.torrent')
+var torrent = fs.readFileSync(path.join(__dirname, 'torrents/leaves.torrent'))
 var parsed
 try {
   parsed = parseTorrentFile(torrent)

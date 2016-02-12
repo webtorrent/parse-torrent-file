@@ -1,8 +1,9 @@
 var fs = require('fs')
 var parseTorrentFile = require('../')
+var path = require('path')
 var test = require('tape')
 
-var bitloveIntro = fs.readFileSync(__dirname + '/torrents/bitlove-intro.torrent')
+var bitloveIntro = fs.readFileSync(path.join(__dirname, 'torrents/bitlove-intro.torrent'))
 
 var bitloveParsed = {
   infoHash: '4cb67059ed6bd08362da625b3ae77f6f4a075705',

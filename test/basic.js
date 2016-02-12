@@ -1,11 +1,12 @@
 var bencode = require('bencode')
 var fs = require('fs')
 var parseTorrentFile = require('../')
+var path = require('path')
 var test = require('tape')
 
-var leaves = fs.readFileSync(__dirname + '/torrents/leaves.torrent')
-var leavesMagnet = fs.readFileSync(__dirname + '/torrents/leaves-magnet.torrent')
-var pride = fs.readFileSync(__dirname + '/torrents/pride.torrent')
+var leaves = fs.readFileSync(path.join(__dirname, 'torrents/leaves.torrent'))
+var leavesMagnet = fs.readFileSync(path.join(__dirname, 'torrents/leaves-magnet.torrent'))
+var pride = fs.readFileSync(path.join(__dirname, 'torrents/pride.torrent'))
 
 var leavesParsed = {
   infoHash: 'd2474e86c95b19b8bcfdb92bc12c9d44667cfa36',

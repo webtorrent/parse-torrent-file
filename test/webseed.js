@@ -1,8 +1,9 @@
 var fs = require('fs')
 var parseTorrentFile = require('../')
+var path = require('path')
 var test = require('tape')
 
-var leavesUrlList = fs.readFileSync(__dirname + '/torrents/leaves-url-list.torrent')
+var leavesUrlList = fs.readFileSync(path.join(__dirname, 'torrents/leaves-url-list.torrent'))
 
 test('parse url-list for webseed support', function (t) {
   var torrent = parseTorrentFile(leavesUrlList)
