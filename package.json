@@ -8,7 +8,7 @@
     "url": "https://github.com/feross/parse-torrent-file/issues"
   },
   "dependencies": {
-    "bencode": "^0.7.0",
+    "bencode": "^0.8.0",
     "simple-sha1": "^2.0.0",
     "uniq": "^1.0.1"
   },
