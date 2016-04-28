@@ -13,3 +13,14 @@ test('encode', function (t) {
 
   t.end()
 })
+
+test('encode w/ comment field', function (t) {
+  var parsedTorrent = parseTorrentFile(fixtures.leaves.torrent)
+  parsedTorrent.comment = 'hi there!'
+
+  var buf = parseTorrentFile.encode(parsedTorrent)
+  var doubleParsedTorrent = parseTorrentFile(buf)
+
+  t.equal(doubleParsedTorrent.comment, parsedTorrent.comment)
+  t.end()
+})
