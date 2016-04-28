@@ -107,18 +107,26 @@ function encodeTorrentFile (parsed) {
     info: parsed.info
   }
 
-  torrent['announce-list'] = parsed.announce.map(function (url) {
+  torrent['announce-list'] = (parsed.announce || []).map(function (url) {
     if (!torrent.announce) torrent.announce = url
     url = new Buffer(url, 'utf8')
     return [ url ]
   })
 
+  torrent['url-list'] = parsed.urlList || []
+
   if (parsed.created) {
     torrent['creation date'] = (parsed.created.getTime() / 1000) | 0
   }
-  if (parsed.urlList) {
-    torrent['url-list'] = parsed.urlList
+
+  if (parsed.createdBy) {
+    torrent['created by'] = parsed.createdBy
   }
+
+  if (parsed.comment) {
+    torrent.comment = parsed.comment
+  }
+
   return bencode.encode(torrent)
 }
 

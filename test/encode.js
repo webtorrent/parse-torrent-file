@@ -7,20 +7,16 @@ test('encode', function (t) {
   var buf = parseTorrentFile.encode(parsedTorrent)
   var doubleParsedTorrent = parseTorrentFile(buf)
 
-  t.deepEqual(doubleParsedTorrent.infoBuffer, parsedTorrent.infoBuffer)
-  t.equal(doubleParsedTorrent.created.getDate(), parsedTorrent.created.getDate())
-  t.deepEqual(doubleParsedTorrent.announce, parsedTorrent.announce)
-
+  t.deepEqual(doubleParsedTorrent, parsedTorrent)
   t.end()
 })
 
 test('encode w/ comment field', function (t) {
   var parsedTorrent = parseTorrentFile(fixtures.leaves.torrent)
   parsedTorrent.comment = 'hi there!'
-
   var buf = parseTorrentFile.encode(parsedTorrent)
   var doubleParsedTorrent = parseTorrentFile(buf)
 
-  t.equal(doubleParsedTorrent.comment, parsedTorrent.comment)
+  t.deepEqual(doubleParsedTorrent, parsedTorrent)
   t.end()
 })
