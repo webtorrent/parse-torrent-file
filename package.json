@@ -2,8 +2,12 @@
   "name": "parse-torrent-file",
   "description": "Parse a .torrent file and return an object of keys/values",
   "version": "3.3.8",
-  "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
   "bin": "./bin/cmd.js",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/"
+  },
   "bugs": {
     "url": "https://github.com/feross/parse-torrent-file/issues"
   },
@@ -21,13 +25,13 @@
   },
   "homepage": "https://github.com/feross/parse-torrent-file",
   "keywords": [
-    "torrent",
-    "parse torrent",
-    "read torrent",
     ".torrent",
+    "bittorrent",
+    "bittorrent",
+    "parse torrent",
     "peer-to-peer",
-    "bittorrent",
-    "bittorrent",
+    "read torrent",
+    "torrent",
     "webtorrent"
   ],
   "license": "MIT",
