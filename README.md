@@ -1,7 +1,13 @@
-# parse-torrent-file
-[![travis](https://img.shields.io/travis/feross/parse-torrent-file/master.svg)](https://travis-ci.org/feross/parse-torrent-file)
-[![npm](https://img.shields.io/npm/v/parse-torrent-file.svg)](https://npmjs.org/package/parse-torrent-file)
-[![downloads](https://img.shields.io/npm/dm/parse-torrent-file.svg)](https://npmjs.org/package/parse-torrent-file)
+# parse-torrent-file [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+
+[travis-image]: https://img.shields.io/travis/feross/parse-torrent-file/master.svg
+[travis-url]: https://travis-ci.org/feross/parse-torrent-file
+[npm-image]: https://img.shields.io/npm/v/parse-torrent-file.svg
+[npm-url]: https://npmjs.org/package/parse-torrent-file
+[downloads-image]: https://img.shields.io/npm/dm/parse-torrent-file.svg
+[downloads-url]: https://npmjs.org/package/parse-torrent-file
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
 
 #### Parse a .torrent file and return an object of keys/values
 
