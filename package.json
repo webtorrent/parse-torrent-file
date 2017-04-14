@@ -3,12 +3,12 @@
   "description": "Parse a .torrent file and return an object of keys/values",
   "version": "4.0.1",
   "author": {
-    "name": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "http://feross.org/"
+    "name": "WebTorrent, LLC",
+    "email": "feross@webtorrent.io",
+    "url": "https://webtorrent.io"
   },
   "bugs": {
-    "url": "https://github.com/feross/parse-torrent-file/issues"
+    "url": "https://github.com/webtorrent/parse-torrent-file/issues"
   },
   "dependencies": {
     "bencode": "^0.11.0",
@@ -22,7 +22,6 @@
     "webtorrent-fixtures": "^1.4.0",
     "zuul": "^3.0.0"
   },
-  "homepage": "https://github.com/feross/parse-torrent-file",
   "keywords": [
     ".torrent",
     "bittorrent",
@@ -37,7 +36,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/parse-torrent-file.git"
+    "url": "git://github.com/webtorrent/parse-torrent-file.git"
   },
   "scripts": {
     "test": "standard && npm run test-node && npm run test-browser",
