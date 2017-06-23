@@ -36,7 +36,7 @@ function decodeTorrentFile (torrent) {
   result.info = torrent.info
   result.infoBuffer = bencode.encode(torrent.info)
   result.infoHash = sha1.sync(result.infoBuffer)
-  result.infoHashBuffer = new Buffer(result.infoHash, 'hex')
+  result.infoHashBuffer = Buffer.from(result.infoHash, 'hex')
 
   result.name = (torrent.info['name.utf-8'] || torrent.info.name).toString()
 
@@ -109,7 +109,7 @@ function encodeTorrentFile (parsed) {
 
   torrent['announce-list'] = (parsed.announce || []).map(function (url) {
     if (!torrent.announce) torrent.announce = url
-    url = new Buffer(url, 'utf8')
+    url = Buffer.from(url, 'utf8')
     return [ url ]
   })
 
