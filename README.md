@@ -1,5 +1,7 @@
 # parse-torrent-file [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/webtorrent/parse-torrent-file.svg)](https://greenkeeper.io/)
+
 [travis-image]: https://img.shields.io/travis/webtorrent/parse-torrent-file/master.svg
 [travis-url]: https://travis-ci.org/webtorrent/parse-torrent-file
 [npm-image]: https://img.shields.io/npm/v/parse-torrent-file.svg
