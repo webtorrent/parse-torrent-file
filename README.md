@@ -1,4 +1,4 @@
-# parse-torrent-file [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+# parse-torrent-file [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 [travis-image]: https://img.shields.io/travis/webtorrent/parse-torrent-file/master.svg
 [travis-url]: https://travis-ci.org/webtorrent/parse-torrent-file
@@ -8,6 +8,8 @@
 [downloads-url]: https://npmjs.org/package/parse-torrent-file
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
+[greenkeeper-image]: https://badges.greenkeeper.io/webtorrent/parse-torrent-file.svg
+[greenkeeper-url]: https://greenkeeper.io/
 
 #### Parse a .torrent file and return an object of keys/values
 
