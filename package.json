@@ -16,7 +16,7 @@
     "uniq": "^1.0.1"
   },
   "devDependencies": {
-    "brfs": "^1.0.0",
+    "brfs": "^1.6.0",
     "standard": "*",
     "tape": "^4.0.0",
     "webtorrent-fixtures": "^1.4.0",
