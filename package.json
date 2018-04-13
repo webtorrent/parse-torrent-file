@@ -16,11 +16,11 @@
     "uniq": "^1.0.1"
   },
   "devDependencies": {
+    "airtap": "0.0.4",
     "brfs": "^1.0.0",
     "standard": "*",
     "tape": "^4.0.0",
-    "webtorrent-fixtures": "^1.4.0",
-    "zuul": "^3.0.0"
+    "webtorrent-fixtures": "^1.4.0"
   },
   "keywords": [
     ".torrent",
@@ -40,8 +40,8 @@
   },
   "scripts": {
     "test": "standard && npm run test-node && npm run test-browser",
-    "test-browser": "zuul -- test/*.js",
-    "test-browser-local": "zuul --local -- test/*.js",
+    "test-browser": "airtap -- test/*.js",
+    "test-browser-local": "airtap --local -- test/*.js",
     "test-node": "tape test/*.js"
   }
 }
