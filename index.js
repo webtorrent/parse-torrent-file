@@ -115,6 +115,10 @@ function encodeTorrentFile (parsed) {
 
   torrent['url-list'] = parsed.urlList || []
 
+  if (parsed.private !== undefined) {
+    torrent['private'] = parsed.private
+  }
+
   if (parsed.created) {
     torrent['creation date'] = (parsed.created.getTime() / 1000) | 0
   }
