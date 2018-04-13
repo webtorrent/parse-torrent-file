@@ -1,7 +1,7 @@
 {
   "name": "parse-torrent-file",
   "description": "Parse a .torrent file and return an object of keys/values",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "author": {
     "name": "WebTorrent, LLC",
     "email": "feross@webtorrent.io",
