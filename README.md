@@ -9,6 +9,8 @@
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
 
+## DEPRECATED: Use the [`parse-torrent`](https://github.com/webtorrent/parse-torrent) package instead.
+
 #### Parse a .torrent file and return an object of keys/values
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/parse-torrent-file.svg)](https://saucelabs.com/u/parse-torrent-file)
