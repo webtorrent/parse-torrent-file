@@ -115,7 +115,7 @@ function encodeTorrentFile (parsed) {
 
   torrent['url-list'] = parsed.urlList || []
 
-  if (parsed.private !== undefined) {
+  if (parsed.private === true || parsed.private === false) {
     torrent['private'] = parsed.private
   }
 
